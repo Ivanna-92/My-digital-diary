@@ -6,7 +6,7 @@ I created this project using HTML, CSS and JavaScript. The main aim was to pract
 
 ## Screenshot
 
-![My Digital Diary Home Page](Screenshot- Daily Reflection9.png)
+![My Digital Diary Home Page](screenshot.png)
 
 ## Features
 
