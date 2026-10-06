@@ -1,0 +1,334 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f1ec;
+    color: #2f2f2f;
+}
+/* HEADER */
+header {
+    background-color: #292524;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+header h1 {
+    margin: 0;
+}
+header a:first-of-type {
+    margin-left: auto;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+header a:hover {
+    background-color: #585553;
+}
+/* DIARY INTRO */
+.diary-intro {
+    max-width: 900px;
+    margin: 30px auto 40px;
+}
+.diary-intro h2 {
+    font-size: 46px;
+    margin-bottom: 8px;
+    color: #292524;
+    letter-spacing: -1.5px;
+}
+.diary-intro p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #78716c;
+    max-width: 550px;
+}
+/* DIARY CARDS */
+.diary-card {
+    background-color: #fffefa;
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e7e2dc;
+    height: fit-content;
+    min-width: 0;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+.diary-card h2 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 21px;
+    color: #292524;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    overflow-wrap: anywhere;
+}
+.diary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.diary-card p {
+    line-height: 1.7;
+    color: #57534e;
+    font-size: 14px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+.diary-card p:first-of-type {
+    font-size: 11px;
+    color: #78716c;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+/* MASONRY GRID */
+.diary-grid {
+    display: block;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin: 10px auto 0;
+}
+.diary-grid .diary-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: fit-content;
+}
+/* EMPTY MESSAGE */
+.empty-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #78716c;
+    font-size: 15px;
+    line-height: 1.6;
+}
+/* MAIN */
+main {
+    padding: 30px 40px;
+}
+/* INSPIRATION */
+.inspiration {
+    max-width: 900px;
+    margin: 45px auto 20px;
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 1px solid #e7e2dc;
+}
+.inspiration-icon {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.inspiration h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #292524;
+}
+.inspiration p {
+    font-size: 13px;
+    color: #78716c;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.inspiration a {
+    color: #292524;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease,
+                opacity 0.3s ease,
+                transform 0.3s ease;
+    display: inline-block;
+}
+.inspiration a:hover {
+    color: #a16207;
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+/* NEW ENTRY FORM */
+.entry-form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.entry-form input,
+.entry-form textarea {
+    padding: 12px;
+    border: 1px solid #d6d3d1;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+.entry-form input:focus,
+.entry-form textarea:focus {
+    outline: none;
+    border-color: #a8a29e;
+    box-shadow: 0 0 0 3px rgba(168, 162, 158, 0.12);
+}
+.entry-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+.save-button {
+    padding: 12px 20px;
+    background-color: #292524;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+.save-button:hover {
+    background-color: #57534e;
+    transform: translateY(-2px);
+}
+.entry-form label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+#successMessage {
+    color: #57534e;
+    font-size: 14px;
+    margin-top: 5px;
+}
+/* VAULT */
+.vault-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+.delete-button {
+    padding: 8px 14px;
+    background-color: #292524;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+.delete-button:hover {
+    background-color: #57534e;
+}
+/* ENTRY DATE */
+.entry-date {
+    font-size: 12px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 10px;
+}
+/* TABLET */
+@media (max-width: 1000px) {
+    .diary-intro,
+    .diary-grid,
+    .inspiration,
+    .vault-list {
+        max-width: 100%;
+    }
+    main {
+        padding: 25px 30px;
+    }
+    .diary-intro {
+        margin: 25px auto 30px;
+    }
+}
+/* MOBILE */
+@media (max-width: 700px) {
+    header {
+        padding: 15px 20px;
+    }
+    header h1 {
+        font-size: 22px;
+    }
+    header a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    main {
+        padding: 20px;
+    }
+    .diary-intro {
+        margin: 20px auto 25px;
+    }
+    .diary-intro h2 {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+    }
+    .diary-intro p {
+        font-size: 14px;
+    }
+    .diary-grid {
+        display: block;
+        height: auto;
+    }
+    .diary-grid .diary-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .diary-card {
+        padding: 22px;
+    }
+    .diary-card h2 {
+        font-size: 20px;
+    }
+    .diary-card p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+    .inspiration {
+        margin: 35px auto 15px;
+        padding: 25px 15px;
+    }
+    .entry-form {
+        margin: 25px auto;
+    }
+    .vault-list {
+        margin: 20px auto;
+    }
+}
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+    header {
+        padding: 12px 15px;
+    }
+    header h1 {
+        font-size: 19px;
+    }
+    header a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    main {
+        padding: 15px;
+    }
+    .diary-intro h2 {
+        font-size: 29px;
+    }
+    .diary-card {
+        padding: 18px;
+    }
+}

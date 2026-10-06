@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Entry</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>New Diary Entry</h1>
+
+            <a href="index.html">Home</a>
+
+        </header>
+
+        <main>
+
+            <section class="diary-intro">
+                <h2>What's on your mind today?</h2>
+                <p>A quiet space for your thoughts, feelings, and reflection. Take a moment for yourself and let your words flow.</p>
+
+            </section>
+
+            <form class="entry-form">
+
+                <label for="titleInput">Title</label>
+                <input id="titleInput" type="text" placeholder="Enter your diary title">
+
+                <label for="dateInput">Date</label>
+                <input id="dateInput" type="date">
+
+                <label for="reflectionInput">Reflection</label>
+                <textarea id="reflectionInput" placeholder="Write your reflection..."></textarea>
+
+                <button class="save-button" type="submit">Save Entry</button>
+                <p id="successMessage"></p>
+            </form>
+
+            <script src="script.js"></script>
+        </main>
+
+    </body>
+</html>
